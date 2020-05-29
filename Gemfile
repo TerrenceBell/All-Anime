@@ -29,6 +29,10 @@ gem 'devise'
 gem 'ruby_parser'
 
 gem 'nokogiri'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'activerecord-session_store'
+gem 'omniauth'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
