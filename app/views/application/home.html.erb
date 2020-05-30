@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 <h1> Welcome back <% current_user.email %>! </h1>
 
-<h2><%= link_to('Logout', destroy_user_sessions_path, method: :delete)%></h2>
+<h2><%= link_to('Logout', destroy_user_session_path, method: :delete)%></h2>
 
 <%else%>
 
