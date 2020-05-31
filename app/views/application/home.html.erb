@@ -1,11 +1,14 @@
 <% if user_signed_in? %>
 <h1> Welcome back <% current_user.email %>! </h1>
 
+
 <h2><%= link_to('Logout', destroy_user_session_path, method: :delete)%></h2>
+<h3><%= link_to('Check out these great shows!',animes_path)%>
 
 <%else%>
 
-<h1> Welcome </h1>
+<h1> Welcome to All Anime! </h1>
 
-
+<h2><%= link_to('If you have an account, sign in here',new_user_session_path) %><br />
+<%= link_to('If your new, create an account here',new_user_registration_path) %>
 <% end %>
