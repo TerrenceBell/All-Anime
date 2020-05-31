@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_30_024423) do
+ActiveRecord::Schema.define(version: 2020_05_31_013529) do
+
+  create_table "animes", force: :cascade do |t|
+    t.string "name"
+    t.string "genre"
+    t.integer "seasons"
+    t.string "watch_options"
+    t.text "description"
+    t.boolean "completed"
+    t.integer "start_year"
+    t.integer "end_year"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "rating"
+    t.string "title"
+    t.text "content"
+    t.integer "anime_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "sessions", force: :cascade do |t|
     t.string "session_id", null: false
@@ -31,6 +54,8 @@ ActiveRecord::Schema.define(version: 2020_05_30_024423) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "provider", limit: 50, default: "", null: false
     t.string "uid", limit: 500, default: "", null: false
+    t.string "favorite_anime"
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
