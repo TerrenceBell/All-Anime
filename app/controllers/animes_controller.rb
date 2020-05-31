@@ -13,7 +13,7 @@ class AnimesController < ApplicationController
     end
 
     def create
-        @Anime = Anime.new(anime_params)
+        @anime = Anime.new(anime_params)
         if @anime.save
             redirect_to @anime
         else
@@ -44,7 +44,7 @@ class AnimesController < ApplicationController
     
       private
     
-      def review_params
-        params.require(:anime).permit(:rating, :title, :content, :anime_id, :user_id)
+      def anime_params
+        params.require(:anime).permit(:name, :genre, :seasons, :watch_options, :description, :completed, :start_year, :end_year)
       end
 end

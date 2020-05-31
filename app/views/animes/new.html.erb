@@ -1,0 +1,26 @@
+<h1>Add a new Anime!</h1>
+
+<%= form_for @anime do |f| %>
+    <%= f.label "Title:" %>
+    <%= f.text_field :name %>
+    <%= f.label "Genre"%>
+    <%= f.select(:genre, options_for_select([['Action/Adventure', 'Action/Adventure'], ['Horror', 'Horror'], ['Psycological', 'Psycological']]))%>
+    <%= f.label "Seasons"%>
+    <%= f.text_field :seasons %>
+    <%= f.label "Watch Options"%>
+    <%= f.text_area :watch_options%> <br />
+    <%= f.label "Description"%>
+    <%= f.text_area :description%>
+    <%= f.label "Years Running"%>
+    
+ 
+  
+     
+ 
+   
+ 
+     
+ 
+     <br>
+    <%= f.submit %>
+  <% end %> 
