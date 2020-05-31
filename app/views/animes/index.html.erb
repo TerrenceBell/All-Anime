@@ -1,1 +1,6 @@
 <h1>These are all of the shows we currently have, click on a show to see details or write a review</h1>
+<br />
+
+<% @animes.each do |anime|%>
+<li><%= link_to anime.name, anime_path(anime)%></li>
+<%end%>
