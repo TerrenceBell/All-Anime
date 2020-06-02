@@ -1,6 +1,8 @@
-<h1>Here is what everyone else is saying</h1>
-<ul>
-<% @review.each do |review|%>
-<li><%review.title%></li>
-<%end%>
-</ul>
+<h1><%= @review.title%></h1>
+<br />
+<body><%= @review.content%></body>
+
+<br />
+<%= button_to "Edit review", edit_review_path%>
+<br />
+<%= button_to "Delete Review", review_path(@review), method: :delete %> 

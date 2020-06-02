@@ -6,8 +6,12 @@
 <body><%= @anime.description %></body>
 
 <br />
+<br /><tr>click here to write a review! <%= link_to "Review Anime", new_review_path(@anime)%></tr>
 
-<%= button_to "Delete Anime", anime_path(@anime), method: :delete %>
+<br /><tr>Click here go back to see all the shows <%= link_to "Anime home", animes_path(@anime)%></tr>
+<br /><%= link_to "Add show", new_anime_path(@anime)%>
+
+ <%= button_to "Delete Anime", anime_path(@anime), method: :delete %> 
 
 
 

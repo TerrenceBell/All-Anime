@@ -1,10 +1,13 @@
-<%= form_for review do |f| %>
+<%= form_for @review do |f| %>
     <%= f.label "Title:" %>
-    <%= f.text_field :title %> <br>
+    <%= f.text_field :title %><br />
  
   
      <%= f.label "Content:" %>
-    <%= f.text_area :content %> <br><br>
+    <%= f.text_area :content %> <br />
+    <%= f.label "Rating" %>
+    <%= f.text_field :rating%><br />
+     <%= f.collection_select :anime_id, Anime.all, :id, :name, {:multiple => false}%>
     <%= f.submit %>
      <% end %>
  
