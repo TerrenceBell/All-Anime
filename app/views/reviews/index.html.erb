@@ -1,5 +1,5 @@
-<ul>
-<% @reviews.each do |review| %>
-  <li><%= link_to "See Review", new_review_path(@anime)%></li>
+<% @reviews.each do |r| %>
+    <h2> <%= r.anime.name %></h2>
+    <h2> <%= r.link_to title %> - <%= r.rating %> </h2>
+    <p> <%= r.content %> </p><br />
 <% end %>
-</ul>
