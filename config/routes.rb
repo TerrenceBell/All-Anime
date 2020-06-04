@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :reviews
   resources :animes do 
-    resources :reviews, [only: new, :index]
+    resources :reviews, only: [:new, :create, :index ]
+  end
   root to:'application#home'
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth'}
 

@@ -3,7 +3,8 @@
 
 
 <h2><%= link_to('Logout', destroy_user_session_path, method: :delete)%></h2>
-<h3><%= link_to('Check out these great shows!',animes_path)%>
+<h3><%= link_to('Check out these great shows!',animes_path)%><br />
+<h4><%= link_to('See reviews', reviews_path)%> or <%= link_to('create a new review', new_review_path)%></h4>
 
 <%else%>
 

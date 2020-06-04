@@ -1,5 +1,9 @@
 <h1>Add a new Anime!</h1>
 
+ <% if @anime.errors.any? %>    
+    <h5><%= @anime.errors.full_messages.to_sentence  %></h5>
+    <% end %> 
+
 <%= form_for @anime do |f| %>
     <%= f.label "Title:" %>
     <%= f.text_field :name %>

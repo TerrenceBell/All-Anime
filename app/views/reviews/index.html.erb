@@ -1,5 +1,5 @@
 <% @reviews.each do |r| %>
     <h2> <%= r.anime.name %></h2>
-    <h2> <%= r.link_to @review.title, %> - <%= r.rating %> </h2>
+    <h2> <%= r.title %> - <%= r.rating %> </h2>
     <p> <%= r.content %> </p><br />
 <% end %>
