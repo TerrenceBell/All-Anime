@@ -43,7 +43,7 @@ class ReviewsController < ApplicationController
 
     def destroy
         @review = Review.find(params[:id])
-        @artist.destroy
+        @review.destroy
         flash[:notice] = "Review deleted."
         redirect_to animes_path
       end

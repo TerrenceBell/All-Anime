@@ -1,4 +1,11 @@
 <h1>These are all of the shows we currently have, click on a show to see details or write a review</h1>
+<%= form_tag('/animes', method: :get) do %>
+
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag('Search', :name => nil) %>
+
+<%end%>
+
 <br />
 <h2>Horror animes</h2>
 <% @animes.horror_genre.each do |anime|%>

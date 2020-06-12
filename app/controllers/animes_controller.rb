@@ -1,7 +1,10 @@
+
 class AnimesController < ApplicationController
 
     def index
-        @animes = Anime.all 
+        #binding.pry
+
+        @animes = Anime.search([params[:search]])
     end
 
     def show 
@@ -45,6 +48,6 @@ class AnimesController < ApplicationController
       private
     
       def anime_params
-        params.require(:anime).permit(:name, :genre, :seasons, :watch_options, :description, :completed, :start_year, :end_year)
+        params.require(:anime).permit(:name, :genre, :seasons, :watch_options, :description, :completed, :start_year, :end_year, :search)
       end
 end
