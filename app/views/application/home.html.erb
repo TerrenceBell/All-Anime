@@ -13,3 +13,9 @@
 <h2><%= link_to('If you have an account, sign in here',new_user_session_path) %><br />
 <%= link_to('If your new, create an account here',new_user_registration_path) %>
 <% end %>
+
+<%= form_tag('/animes', method: :get) do %>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag('Search', :name => nil) %>
+
+<%end%>

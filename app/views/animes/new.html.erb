@@ -2,7 +2,7 @@
 
  <% if @anime.errors.any? %>    
     <h5><%= @anime.errors.full_messages.to_sentence  %></h5>
-    <% end %> 
+    <% end %>
 
 <%= form_for @anime do |f| %>
     <%= f.label "Title:" %>

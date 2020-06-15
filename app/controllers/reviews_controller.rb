@@ -2,7 +2,8 @@ class ReviewsController < ApplicationController
     
     
     def index
-        @reviews = Review.all 
+         @reviews = Review.search(params[:search])     
+       
     end
 
     def new
@@ -51,6 +52,6 @@ class ReviewsController < ApplicationController
       private
     
       def review_params
-        params.require(:review).permit(:title, :content, :rating, :user_id, :anime_id)
+        params.require(:review).permit(:title, :content, :rating, :user_id, :anime_id, :search)
       end
 end

@@ -1,6 +1,6 @@
     <% if @review.errors.any? %>    
     <h5><%= @review.errors.full_messages.to_sentence  %></h5>
-    <% end %> 
+    <% end %>
 <%= form_for @review do |f| %>
     <%= f.label "Title:" %>
     <%= f.text_field :title %><br />

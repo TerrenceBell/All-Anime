@@ -10,6 +10,9 @@
 
 <br /><tr>Click here go back to see all the shows <%= link_to "Anime home", animes_path(@anime)%></tr>
 <br /><%= link_to "Add show", new_anime_path(@anime)%>
+<br /><% @anime.reviews.each do |review|%>
+<br /><%=link_to review.title, anime_review_path(@anime, review) %>
+<% end %>
 
  <%= button_to "Delete Anime", anime_path(@anime), method: :delete %> 
 
