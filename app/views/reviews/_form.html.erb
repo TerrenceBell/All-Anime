@@ -1,18 +1,42 @@
-    <% if @review.errors.any? %>    
-    <h5><%= @review.errors.full_messages.to_sentence  %></h5>
+<% if @review.errors.any? %>    
+<h5><%= @review.errors.full_messages.to_sentence  %></h5>
+<% end %>
+
+
+<% if @anime %>
+    <h2> Create a review for <%=@anime.name%></h2>
+
+    <%= form_for @review do |f| %>
+        <%= f.label "Title:" %>
+        <%= f.text_field :title %><br />
+    
+    
+        <%= f.label "Content:" %>
+        <%= f.text_area :content %> <br />
+        <%= f.label "Rating" %>
+        <%= f.text_field :rating%><br />
+        <%= f.hidden_field :anime_id%>
+        <%= f.submit %>
     <% end %>
-<%= form_for @review do |f| %>
-    <%= f.label "Title:" %>
-    <%= f.text_field :title %><br />
- 
-  
-     <%= f.label "Content:" %>
-    <%= f.text_area :content %> <br />
-    <%= f.label "Rating" %>
-    <%= f.text_field :rating%><br />
-     <%= f.collection_select :anime_id, Anime.all, :id, :name, {:multiple => false}%>
-    <%= f.submit %>
-     <% end %>
- 
-     <br />
+
+
+
+<%else%>
+
+
+    <%= form_for @review do |f| %>
+        <%= f.label "Title:" %>
+        <%= f.text_field :title %><br />
+    
+    
+        <%= f.label "Content:" %>
+        <%= f.text_area :content %> <br />
+        <%= f.label "Rating" %>
+        <%= f.text_field :rating%><br />
+        <%= f.collection_select :anime_id, Anime.all, :id, :name, {:multiple => false}%>
+        <%= f.submit %>
+    
+    <% end %>
+<% end %>
+     
     
