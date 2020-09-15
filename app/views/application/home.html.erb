@@ -8,14 +8,27 @@
 
 <%else%>
 
-<h1> Welcome to All Anime! </h1>
+<div classname="home" style="
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border: black;
+    /* width: 300px; */
+    border: 5px solid;
+    border-radius: 75px;
+    padding: 50px;
+    margin: 20px;
+">
+
+<h1 classname="header"> Welcome to All Anime! </h1>
 
 <h2><%= link_to('If you have an account, sign in here',new_user_session_path) %><br />
-<%= link_to('If your new, create an account here',new_user_registration_path) %>
+<br /><%= link_to('If your new, create an account here',new_user_registration_path) %>
 <% end %>
+</div>
 
-<%= form_tag('/animes', method: :get) do %>
-<%= text_field_tag :search, params[:search] %>
-<%= submit_tag('Search', :name => nil) %>
+<%# <%= form_tag('/animes', method: :get) do %>
+<%# <%= text_field_tag :search, params[:search] %>
+<%# <%= submit_tag('Search', :name => nil) %> 
 
-<%end%>
+<%# <%end%> 
