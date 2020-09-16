@@ -1,30 +1,24 @@
+<html style=" 
+  background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">         
+
 <% if user_signed_in? %>
 <h1> Welcome back <% current_user.email %>! </h1>
 
 
 <h2><%= link_to('Logout', destroy_user_session_path, method: :delete)%></h2>
-<h3><%= link_to('Check out these great shows!',animes_path)%><br />
-<h4><%= link_to('See reviews', reviews_path)%> or <%= link_to('create a new review', new_review_path)%></h4>
+<p><%= link_to('Check out these great shows!',animes_path)%><br />
+<p><%= link_to('See reviews', reviews_path)%> or <%= link_to('create a new review', new_review_path)%>
 
 <%else%>
 
-<div classname="home" style="
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
-    border: black;
-    /* width: 300px; */
-    border: 5px solid;
-    border-radius: 75px;
-    padding: 50px;
-    margin: 20px;
-">
-
-<h1 classname="header"> Welcome to All Anime! </h1>
-
-<h2><%= link_to('If you have an account, sign in here',new_user_session_path) %><br />
-<br /><%= link_to('If your new, create an account here',new_user_registration_path) %>
-<% end %>
+<h1 class="header">All Anime </h1>
+<div class="body">
+  <h2>The app where you can find and review great animes! This great community where people can share feelings on different animes/mangas, more animes will be added weekly so be ready for those!
+  <img src="./img/skrabkgrd.png" alt="">
+  <h3><%= link_to('If you have an account, sign in here',new_user_session_path) %><br />
+  <br /><%= link_to('If your new, create an account here',new_user_registration_path) %>
+  <% end %>
 </div>
 
 <%# <%= form_tag('/animes', method: :get) do %>

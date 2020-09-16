@@ -19,3 +19,27 @@
 .header { 
     text-align: center;
 }
+a {
+    color: #410099;
+    text-decoration: none;
+}
+
+.body { 
+    justify-content: center;
+    /* text-align: center; */
+    padding: 10px;
+    border: black;
+    border: 5px solid;
+    /* border-radius: 75px; */
+    /* padding: 50px; */
+    /* margin: 20px; */
+    
+}
+.header {
+    padding: 20px;
+    text-align: center;
+    background: #410099;
+    color: white;
+    font-size: 50px;
+    width: 290px;
+  }
