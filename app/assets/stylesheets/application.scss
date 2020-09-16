@@ -31,9 +31,8 @@ a {
     border: black;
     border: 5px solid;
     /* border-radius: 75px; */
-    /* padding: 50px; */
-    /* margin: 20px; */
-    
+    padding: 50px;
+    margin: 20px;
 }
 .header {
     padding: 20px;
@@ -41,5 +40,7 @@ a {
     background: #410099;
     color: white;
     font-size: 50px;
-    width: 290px;
+    margin: auto;
+    width: 50%;
+    justify-content: center;
   }
